@@ -8,7 +8,7 @@ body{
        display: flex;
        flex-flow: row wrap;
        background-color: white;
-       padding: 0 auto 0 auto;;
+       padding:0 10px;
 justify-content: center;  
 justify-items: center;
 }
@@ -136,29 +136,6 @@ content:'In';
 .experience-location::after{
 content:'on';
 }
-#contact h3{
-    display:none;
-}
-.contact{
-    display:flex;
-    flex-direction: row;
-    margin:0;
-}
-.contact-type{
-    width:200px;
-    padding:3px;
-    margin:0;
-    color:white;
-    background-color: red;
-}
-.contact-value{
-    width:100%;
-    padding:3px;
-    margin:0;
-    color:red;
-    background-color: black;
-}
-
  @media only screen and (min-width: 1461px){
     #contact{
         position:absolute;
@@ -169,21 +146,60 @@ content:'on';
     #contact h3{
         display:none;
     }
-   
-}
-@media only screen and (max-width: 1460px){
-    #contacts{
-        position:static;
+    .contacts{
+        display:flex;
+    flex-flow:row wrap;
+        margin:0;
     }
-    #contact h3{
-        display:inline-block;
+    .contact{
+        display:flex;
+        flex-basis:700px;
+        margin:0;
+    }
+    .contact-type{
+        width:200px;
+        padding:3px;
+        margin:0;
+        color:white;
+        background-color: red;
     }
     .contact-value{
         width:100%;
         padding:3px;
         margin:0;
         color:red;
+        background-color: black;
+    }
+   
+}
+@media only screen and (max-width: 1460px){
+    #contact{
+        position:static;
+    }
+    #contact h3{
+        display:inline-block;
+    }
+    .contact-value{
+        padding:3px;
+        margin:0;
+        color:red;
         background-color: white ;
 
+    }
+    dt{
+        color:white;
+        background-color: red;
+        flex-basis:120px;
+    }
+    .contacts{
+        display:flex;
+        flex-flow:row wrap;
+    }
+    dl{
+        flex-basis:500px;
+        flex-shrink:1;
+        display:flex;
+        flex-flow:row nowrap;
+        margin:0 10px;
     }
 }
